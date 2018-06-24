@@ -52,6 +52,13 @@ $config = [
         ],
 
     ],
+
+    'modules' => [
+        'supplier' => [
+            'class' => 'app\modules\supplier\Module',
+        ],
+    ],
+
     'params' => $params,
 ];
 
