@@ -14,6 +14,15 @@ class m180624_213116_create_feedback_table extends Migration
     {
         $this->createTable('feedback', [
             'id' => $this->primaryKey(),
+            'name' => $this->string(),
+            'email' => $this->string(),
+            'phone' => $this->string(),
+            'company' => $this->string(),
+            'file' => $this->string(),
+            'text' => $this->string(),
+            'user_id' => $this->integer(),
+            'article_id' => $this->integer(),
+            'status' => $this->integer()
         ]);
     }
 
