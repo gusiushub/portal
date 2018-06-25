@@ -3,53 +3,7 @@
 
 ?>
 
-    <div class="secondary-navbar margin-bottom-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="secondary-navigation">
-                        <ul class="secondary-navigation__list">
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link secondary-navigation__link--active">
-                                    Find a supplier
-                                </a>
-                            </li>
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
-                                    Become a supplier
-                                </a>
-                            </li>
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
-                                    Crew
-                                </a>
-                            </li>
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
-                                    Vessels sell/chartering
-                                </a>
-                            </li>
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
-                                    Chartering market
-                                </a>
-                            </li>
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
-                                    Contacts
-                                </a>
-                            </li>
-                            <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
-                                    Faq
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -63,7 +17,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="primary-menu margin-bottom-medium">
-                    <a href='#' class="primary-menu__item">
+                    <a href='/find/crew' class="primary-menu__item">
                         <img src="img/img.png" alt="icon" class="primary-menu__icon">
                         <h3 class="primary-menu__title">
                             find a crew
@@ -107,10 +61,10 @@
                                 Faculty
                             </h4>
                             <?php
-                            $arr1 = $model->getAll('faculty');
-                            $arr2 = $model->getAll('lvl_eng');
-                            $arr3 = $model->getAll('port');
-                            $arr4 = $model->getAll('country');
+                                $arr1 = $model->getAll('faculty');
+                                $arr2 = $model->getAll('lvl_eng');
+                                $arr3 = $model->getAll('port');
+                                $arr4 = $model->getAll('country');
                              ?>
                             <div class="select-style">
                                 <select name="refine"  class="select-style__select">

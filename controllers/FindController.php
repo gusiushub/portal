@@ -19,4 +19,20 @@ class FindController extends Controller
         $model = new StudentSearch();
         return $this->render('student',['model'=>$model]);
     }
+
+    public function actionCrew()
+    {
+        $model = new StudentSearch();
+        return $this->render('crew',['model'=>$model]);
+    }
+
+    public function actionVessels()
+    {
+        return $this->render('vessels');
+    }
+
+    public function actionSupplier()
+    {
+        return $this->render('supplier');
+    }
 }

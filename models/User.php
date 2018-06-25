@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "user".
@@ -21,8 +23,13 @@ use Yii;
  * @property string $option
  * @property string $photo
  */
-class User extends \yii\db\ActiveRecord
+class User extends ActiveRecord implements IdentityInterface
 {
+
+    const ROLE_ADMIN = 'root';
+    const ROLE_USER = 'user';
+    const ROLE_ATTORNEY = 'attorney';
+
     /**
      * {@inheritdoc}
      */
@@ -64,4 +71,57 @@ class User extends \yii\db\ActiveRecord
             'photo' => 'Photo',
         ];
     }
+
+    /**
+     * @param int|string $id
+     * @return IdentityInterface
+     */
+    public static function findIdentity($id)
+    {
+        return static::findOne($id);
+    }
+
+    /**
+     * @param mixed $token
+     * @param null $type
+     * @return IdentityInterface
+     */
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        return static::findOne(['access_token' => $token]);
+    }
+
+    /**
+     * @return int|string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getAuthKey()
+    {
+        return $this->authKey;
+    }
+
+    /**
+     * @param string $authKey
+     * @return bool
+     */
+    public function validateAuthKey($authKey)
+    {
+        return $this->authKey === $authKey;
+    }
+
+    /**
+     * @param $role
+     * @return bool
+     */
+    public function can($role) {
+        return $this->role == $role;
+    }
+
 }

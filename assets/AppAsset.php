@@ -23,17 +23,12 @@ class AppAsset extends AssetBundle
         'css/styles.css',
         'css/bootstrap-grid.min.css',
         'css/normalize.css',
-
-
-        //'css/site.css',
     ];
 
     public $cssOptions = [
         'type' => 'text/css',
     ];
     public $js = [
-//        'js/jquery.min.js',
-//        'js/skel.min.js',
         'js/common.js',
     ];
     public $depends = [

@@ -114,7 +114,7 @@ AppAsset::register($this);
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="five-buttons horizontal-between">
-                            <a href='#' class="five-buttons__item">
+                            <a href='/find/supplier' class="five-buttons__item">
                                 <div class="icon-wrapper">
                                     <img src="img/icons/zoom-5btn.png" alt="zoom" class="five-buttons__icon">
                                 </div>
@@ -122,7 +122,7 @@ AppAsset::register($this);
                                     Find a supplier
                                 </h4>
                             </a>
-                            <a href='#' class="five-buttons__item">
+                            <a href='/find/vessels' class="five-buttons__item">
                                 <div class="icon-wrapper">
                                     <img src="img/icons/hands-5btn.png" alt="hands" class="five-buttons__icon">
                                 </div>
@@ -138,7 +138,7 @@ AppAsset::register($this);
                                     Crew
                                 </h4>
                             </a>
-                            <a href='#' class="five-buttons__item">
+                            <a href='/find/vessels' class="five-buttons__item">
                                 <div class="icon-wrapper">
                                     <img src="img/icons/ship-5btn.png" alt="ship" class="five-buttons__icon">
                                 </div>
@@ -176,7 +176,7 @@ AppAsset::register($this);
                             </h4>
                             <ul class="footer-nav__list">
                                 <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
+                                    <a href="/find/supplier" class="footer-nav__link">
                                         Find a supplier
                                     </a>
                                 </li>
@@ -191,7 +191,7 @@ AppAsset::register($this);
                                     </a>
                                 </li>
                                 <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
+                                    <a href="/find/vessels" class="footer-nav__link">
                                         Vessels sell/chartering
                                     </a>
                                 </li>
@@ -272,43 +272,6 @@ AppAsset::register($this);
         </div>
     </footer>
 <?php }else{ ?>
-<!--<div class="wrap">-->
-<!--    --><?php
-//    NavBar::begin([
-//        'brandLabel' => Yii::$app->name,
-//        'brandUrl' => Yii::$app->homeUrl,
-//        'options' => [
-//            'class' => 'navbar-inverse navbar-fixed-top',
-//        ],
-//    ]);
-//    echo Nav::widget([
-//        'options' => ['class' => 'navbar-nav navbar-right'],
-//        'items' => [
-//            ['label' => 'Главная', 'url' => ['/']],
-//            ['label' => 'Найти поставщика', 'url' => ['/find']],
-//            ['label' => 'Contact', 'url' => ['/site/contact']],
-//            Yii::$app->user->isGuest ? (
-//                ['label' => 'Login', 'url' => ['/site/login']]
-//            ) : (
-//                '<li>'
-//                . Html::beginForm(['/site/logout'], 'post')
-//                . Html::submitButton(
-//                    'Logout (' . Yii::$app->user->identity->username . ')',
-//                    ['class' => 'btn btn-link logout']
-//                )
-//                . Html::endForm()
-//                . '</li>'
-//            )
-//        ],
-//    ]);
-//    NavBar::end();
-//    ?>
-<!---->
-<!--    <div class="container">-->
-<!--        --><?//= Breadcrumbs::widget([
-//            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-//        ]) ?>
-<!--        --><?//= Alert::widget() ?>
 
 <header class="header">
     <div class="container">
@@ -319,10 +282,10 @@ AppAsset::register($this);
                         <a href="#"><img src="img/logotype.png" alt="logotype" class="logotype-box__logo"></a>
                     </div>
                     <div class="authorization">
-                        <a href="#" class="authorization__link">
+                        <a href="/guest/login" class="authorization__link">
                             Sign In
                         </a>
-                        <a href="#" class="authorization__link">
+                        <a href="/guest/signup" class="authorization__link">
                             Sign Up
                         </a>
                     </div>
@@ -333,17 +296,17 @@ AppAsset::register($this);
                         <nav class="adaptive-menu__navigation">
                             <ul class="adaptive-menu__list">
                                 <li class="adaptive-menu__item">
-                                    <a href="#" class="adaptive-menu__link">
+                                    <a href="/guest/login" class="adaptive-menu__link">
                                         Sign In
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="#" class="adaptive-menu__link">
+                                    <a href="/guest/signup" class="adaptive-menu__link">
                                         Sign Up
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="#" class="adaptive-menu__link">
+                                    <a href="/find/supplier" class="adaptive-menu__link">
                                         Find a supplier
                                     </a>
                                 </li>
@@ -353,12 +316,12 @@ AppAsset::register($this);
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="/find/student" class="adaptive-menu__link adaptive-menu__link--active">
+                                    <a href="find/crew/" class="adaptive-menu__link adaptive-menu__link--active">
                                         Crew
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="#" class="adaptive-menu__link">
+                                    <a href="/find/vessels" class="adaptive-menu__link">
                                         Vessels sell/chartering
                                     </a>
                                 </li>
@@ -384,6 +347,55 @@ AppAsset::register($this);
             </div>
         </div>
     </div>
+
+    <div class="secondary-navbar margin-bottom-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="secondary-navigation">
+                        <ul class="secondary-navigation__list">
+                            <li class="secondary-navigation__item">
+                                <a href="/find/supplier" class="secondary-navigation__link secondary-navigation__link--active">
+                                    Find a supplier
+                                </a>
+                            </li>
+                            <li class="secondary-navigation__item">
+                                <a href="#" class="secondary-navigation__link">
+                                    Become a supplier
+                                </a>
+                            </li>
+                            <li class="secondary-navigation__item">
+                                <a href="/find/crew" class="secondary-navigation__link">
+                                    Crew
+                                </a>
+                            </li>
+                            <li class="secondary-navigation__item">
+                                <a href="/find/vessels" class="secondary-navigation__link">
+                                    Vessels sell/chartering
+                                </a>
+                            </li>
+                            <li class="secondary-navigation__item">
+                                <a href="#" class="secondary-navigation__link">
+                                    Chartering market
+                                </a>
+                            </li>
+                            <li class="secondary-navigation__item">
+                                <a href="#" class="secondary-navigation__link">
+                                    Contacts
+                                </a>
+                            </li>
+                            <li class="secondary-navigation__item">
+                                <a href="#" class="secondary-navigation__link">
+                                    Faq
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
         <?= $content ?>
     <footer class="footer">
         <div class="container">
@@ -416,7 +428,7 @@ AppAsset::register($this);
                                     </a>
                                 </li>
                                 <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
+                                    <a href="/find/vessels" class="footer-nav__link">
                                         Vessels sell/chartering
                                     </a>
                                 </li>
