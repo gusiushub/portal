@@ -353,7 +353,7 @@ AppAsset::register($this);
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="#" class="adaptive-menu__link adaptive-menu__link--active">
+                                    <a href="/find/student" class="adaptive-menu__link adaptive-menu__link--active">
                                         Crew
                                     </a>
                                 </li>
