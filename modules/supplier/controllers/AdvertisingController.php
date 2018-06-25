@@ -124,4 +124,14 @@ class AdvertisingController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionHype()
+    {
+        return $this->render('hype');
+    }
+
+    public function actionStudent()
+    {
+        return $this->render('student');
+    }
 }

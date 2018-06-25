@@ -57,6 +57,8 @@ class Advertising extends \yii\db\ActiveRecord
             [['length_from', 'length_to', 'draft_from', 'draft_to', 'deadweight_from', 'deadweight_to', 'price_from', 'price_to', 'viewed', 'user_id', 'status', 'category_id'], 'integer'],
             [['year_from', 'year_to', 'date'], 'safe'],
             [['description', 'content'], 'string'],
+            [['date'], 'date','format'=>'php:Y-m-d'],
+            [['date'], 'default','value'=>date('Y-m-d')],
             [['title', 'vessel_type', 'option_vessel', 'currency', 'faculty', 'flag', 'position', 'lvl_eng', 'salary', 'port', 'country', 'image'], 'string', 'max' => 255],
         ];
     }
