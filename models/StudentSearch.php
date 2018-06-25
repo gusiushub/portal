@@ -71,4 +71,9 @@ class StudentSearch extends Student
 
         return $dataProvider;
     }
+
+    public function getAll($field)
+    {
+        return Student::find()->select([$field])->distinct()->all();
+    }
 }

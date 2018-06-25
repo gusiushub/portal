@@ -1,15 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zolow
- * Date: 25.06.2018
- * Time: 8:50
- */
 
 namespace app\controllers;
 
 
-class FindController
-{
+use app\models\Student;
+use app\models\StudentSearch;
+use yii\web\Controller;
 
+class FindController extends Controller
+{
+    public function actionIndex()
+    {
+        return $this->render('index');
+    }
+
+    public function actionStudent()
+    {
+        $model = new StudentSearch();
+        return $this->render('student',['model'=>$model]);
+    }
 }

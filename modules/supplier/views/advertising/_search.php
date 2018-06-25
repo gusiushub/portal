@@ -15,8 +15,6 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
-
     <?= $form->field($model, 'title') ?>
 
     <?= $form->field($model, 'vessel_type') ?>
@@ -54,8 +52,6 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'lvl_eng') ?>
 
     <?php // echo $form->field($model, 'salary') ?>
-
-    <?php // echo $form->field($model, 'port') ?>
 
     <?php // echo $form->field($model, 'country') ?>
 

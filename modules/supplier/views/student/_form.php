@@ -8,23 +8,26 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-
+<div class="student-form">
 
     <?php $form = ActiveForm::begin(); ?>
-<div class="col-lg-6">
-    <?= $form->field($model, 'faculty')->textInput(['maxlength' => true, 'class' => 'textinput-container__input textinput-container__input--sing textinput-container__input--sing-3']) ?>
 
-    <?= $form->field($model, 'lvl_eng')->textInput(['maxlength' => true, 'class' => 'textinput-container__input textinput-container__input--sing textinput-container__input--sing-3']) ?>
-</div>
-<div class="col-lg-6">
-    <?= $form->field($model, 'port')->textInput(['maxlength' => true, 'class' => 'textinput-container__input textinput-container__input--sing textinput-container__input--sing-3']) ?>
+    <?= $form->field($model, 'f_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'country')->textInput(['maxlength' => true, 'class' => 'textinput-container__input textinput-container__input--sing textinput-container__input--sing-3']) ?>
-</div>
+    <?= $form->field($model, 's_name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'faculty')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'lvl_eng')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'port')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
+
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
-
+</div>
