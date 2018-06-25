@@ -25,7 +25,7 @@ class AppAsset extends AssetBundle
         'css/normalize.css',
 
 
-        //'css/site.css',
+        'css/site.css',
     ];
 
     public $cssOptions = [

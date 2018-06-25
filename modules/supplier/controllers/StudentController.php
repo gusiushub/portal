@@ -2,19 +2,17 @@
 
 namespace app\modules\supplier\controllers;
 
-use app\models\Student;
-use app\models\StudentForm;
 use Yii;
-use app\models\Advertising;
-use app\models\AdvertisingSearch;
+use app\models\Student;
+use app\models\StudentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AdvertisingController implements the CRUD actions for Advertising model.
+ * StudentController implements the CRUD actions for Student model.
  */
-class AdvertisingController extends Controller
+class StudentController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -32,12 +30,12 @@ class AdvertisingController extends Controller
     }
 
     /**
-     * Lists all Advertising models.
+     * Lists all Student models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new AdvertisingSearch();
+        $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -47,7 +45,7 @@ class AdvertisingController extends Controller
     }
 
     /**
-     * Displays a single Advertising model.
+     * Displays a single Student model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,13 +58,13 @@ class AdvertisingController extends Controller
     }
 
     /**
-     * Creates a new Advertising model.
+     * Creates a new Student model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Advertising();
+        $model = new Student();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -78,7 +76,7 @@ class AdvertisingController extends Controller
     }
 
     /**
-     * Updates an existing Advertising model.
+     * Updates an existing Student model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -98,7 +96,7 @@ class AdvertisingController extends Controller
     }
 
     /**
-     * Deletes an existing Advertising model.
+     * Deletes an existing Student model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -112,24 +110,18 @@ class AdvertisingController extends Controller
     }
 
     /**
-     * Finds the Advertising model based on its primary key value.
+     * Finds the Student model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Advertising the loaded model
+     * @return Student the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Advertising::findOne($id)) !== null) {
+        if (($model = Student::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-
-    public function actionHype()
-    {
-        return $this->render('hype');
-    }
-
 }
