@@ -1,8 +1,6 @@
 <?php
 
-
 ?>
-
 <main>
     <section class="sign-in vertical-center">
         <div class="container">
@@ -14,6 +12,7 @@
                                 Login to account
                             </h2>
                         </div>
+
                         <h4 class="filter__title">
                             E-mail
                         </h4>

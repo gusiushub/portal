@@ -4,10 +4,10 @@ namespace app\controllers;
 
 use app\components\AccessRule;
 use app\models\User;
+use app\models\Signup;
 use Yii;
 use app\models\LoginForm;
 use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
 use yii\web\Controller;
 
 class GuestController extends Controller
@@ -32,12 +32,6 @@ class GuestController extends Controller
                     ],
                 ],
             ],
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-//                    'logout' => ['post'],
-//                ],
-//            ],
         ];
     }
 
@@ -76,7 +70,7 @@ class GuestController extends Controller
     /**
      * Logout action.
      *
-     * @return Response
+     * @return \yii\web\Response
      */
     public function actionLogout()
     {
@@ -90,16 +84,16 @@ class GuestController extends Controller
      */
     public function actionSignup()
     {
-        return $this->render('signup');
+        $model = new Signup();
+        if(isset($_POST['Signup']))
+        {
+            $model->attributes = Yii::$app->request->post('Signup');
+            if($model->validate() && $model->signup())
+            {
+                return $this->goHome();
+            }
+        }
+        return $this->render('signup',['model'=>$model]);
     }
-
-    /**
-     * @return string
-     */
-    public function actionCrew()
-    {
-        return $this->render('signup');
-    }
-
 
 }
