@@ -1,8 +1,4 @@
-<?php
-
-?>
-<main>
-    <section class="sign-in vertical-center">
+<section class="sign-in vertical-center">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-12">
@@ -35,4 +31,3 @@
             </div>
         </div>
     </section>
-</main>

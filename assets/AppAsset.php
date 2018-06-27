@@ -20,9 +20,10 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/styles.css',
-        'css/bootstrap-grid.min.css',
         'css/normalize.css',
+        'css/bootstrap-grid.min.css',
+        'css/styles.css',
+        'css/fonts.css',
     ];
 
     public $cssOptions = [
@@ -30,6 +31,8 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/common.js',
+//        'libs/jQuery/jquery-3.3.1.min.js',
+//        'libs/slick/slick.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

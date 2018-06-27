@@ -21,35 +21,35 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Статья о кроликах" />
     <meta name="keywords" content="кролики, разведение, питание" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../../img/favicon.png">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php if($_SERVER['REDIRECT_URL']=='') {?>
+<?php if($_SERVER['REDIRECT_URL']=='/guest' or $_SERVER['REDIRECT_URL']=='/guest/')  {?>
     <header class="header header--blue">
         <div class="container">
             <div class="top-navbar">
                 <div class="row">
                     <div class="col-lg-6 vertical-center">
                         <div class="logotype-box">
-                            <a href="#"><img src="img/white-logo.png" alt="logotype" class="logotype-box__logo logotype-box__logo--white"></a>
+                            <a href="#"><img src="../../img/white-logo.png" alt="logotype" class="logotype-box__logo logotype-box__logo--white"></a>
                         </div>
                         <div class="adaptive-menu">
                             <div class="adaptive-menu__button adaptive-menu__button--white">
-                                <img src="img/icons/burger-white.png" alt="burger">
+                                <img src="../../img/icons/burger-white.png" alt="burger">
                             </div>
                             <nav class="adaptive-menu__navigation adaptive-menu__navigation--main-page">
                                 <ul class="adaptive-menu__list">
                                     <li class="adaptive-menu__item">
-                                        <a href="#" class="adaptive-menu__link">
+                                        <a href="/guest/login" class="adaptive-menu__link">
                                             Sign In
                                         </a>
                                     </li>
                                     <li class="adaptive-menu__item">
-                                        <a href="#" class="adaptive-menu__link">
+                                        <a href="/guest/signup" class="adaptive-menu__link">
                                             Sign Up
                                         </a>
                                     </li>
@@ -69,10 +69,10 @@ AppAsset::register($this);
                     </div>
                     <div class="col-lg-6">
                         <div class="authorization">
-                            <a href="#" class="authorization__link authorization__link--white">
+                            <a href="/guest/login" class="authorization__link authorization__link--white">
                                 Sign In
                             </a>
-                            <a href="#" class="authorization__link authorization__link--white">
+                            <a href="/guest/signup" class="authorization__link authorization__link--white">
                                 Sign Up
                             </a>
                             <a href="#" class="authorization__link authorization__link--white">
@@ -87,190 +87,7 @@ AppAsset::register($this);
             </div>
         </div>
     </header>
-    <main>
-        <section class="page-start">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 horizontal-center">
-                        <div class="company-description">
-                            <img src="img/logotype-big.png" alt="logotype" class="company-description__logo margin-bottom-light">
-                            <div class="company-description__spetifications">
-                                <p class="company-description__paragraph">
-                                    The main aim of the portal is to minimise the searching time of needed
-                                </p>
-                                <p class="company-description__paragraph margin-bottom-medium">
-                                    <span class="company-description__paragraph--blue">services, goods, crew, vessels and cargo</span> in any part of the world.
-                                </p>
-                                <p class="company-description__paragraph">
-                                    Thanks to the capacious data-base and unique searching system
-                                </p>
-                                <p class="company-description__paragraph">
-                                    you can easily find or offer everything you need in any port of the world!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="five-buttons horizontal-between">
-                            <a href='/find/supplier' class="five-buttons__item">
-                                <div class="icon-wrapper">
-                                    <img src="img/icons/zoom-5btn.png" alt="zoom" class="five-buttons__icon">
-                                </div>
-                                <h4 class="five-buttons__title">
-                                    Find a supplier
-                                </h4>
-                            </a>
-                            <a href='/find/vessels' class="five-buttons__item">
-                                <div class="icon-wrapper">
-                                    <img src="img/icons/hands-5btn.png" alt="hands" class="five-buttons__icon">
-                                </div>
-                                <h4 class="five-buttons__title">
-                                    Become a supplier
-                                </h4>
-                            </a>
-                            <a href='#' class="five-buttons__item">
-                                <div class="icon-wrapper">
-                                    <img src="img/icons/case-5btn.png" alt="case" class="five-buttons__icon">
-                                </div>
-                                <h4 class="five-buttons__title">
-                                    Crew
-                                </h4>
-                            </a>
-                            <a href='/find/vessels' class="five-buttons__item">
-                                <div class="icon-wrapper">
-                                    <img src="img/icons/ship-5btn.png" alt="ship" class="five-buttons__icon">
-                                </div>
-                                <h4 class="five-buttons__title">
-                                    Vessels sell/chartering
-                                </h4>
-                            </a>
-                            <a href='#' class="five-buttons__item">
-                                <div class="icon-wrapper">
-                                    <img src="img/icons/changing-5btn.png" alt="changing" class="five-buttons__icon">
-                                </div>
-                                <h4 class="five-buttons__title">
-                                    Chartering market
-                                </h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="row margin-bottom-light">
-                <div class="col-lg-4">
-                    <div class="logotype-box">
-                        <img src="img/logotype-big.png" alt="logotype" class="logotype-box__footer">
-                    </div>
-                </div>
-                <div class="col-lg-6 offset-lg-2">
-                    <div class="footer-nav-wrapper">
-                        <div class="footer-nav">
-                            <h4 class="footer-nav__title">
-                                For partners
-                            </h4>
-                            <ul class="footer-nav__list">
-                                <li class="footer-nav__item">
-                                    <a href="/find/supplier" class="footer-nav__link">
-                                        Find a supplier
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Become a supplier
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Crew
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="/find/vessels" class="footer-nav__link">
-                                        Vessels sell/chartering
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Chartering market
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-nav">
-                            <h4 class="footer-nav__title">
-                                Learn more
-                            </h4>
-                            <ul class="footer-nav__list">
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Contacts
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Faq
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Terms and Conditions
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Sign In
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Sign Up
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row margin-bottom-light">
-                <div class="col-lg-12">
-                    <div class="social-networks">
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-mail.png" alt="mail">
-                        </a>
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-mobile.png" alt="mobile">
-                        </a>
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-skype.png" alt="skype">
-                        </a>
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-mobile-2.png" alt="mobile">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 horizontal-between">
-                    <div class="copyright">
-                        <p class="copyright__content">
-                            © MarineNotes, 2018
-                        </p>
-                    </div>
-                    <div class="copyright">
-                        <p class="copyright__design-by">
-                            Design by HoteyCompany
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 <?php }else{ ?>
 
 <header class="header">
@@ -279,7 +96,7 @@ AppAsset::register($this);
             <div class="row">
                 <div class="col-lg-12 vertical-center horizontal-between">
                     <div class="logotype-box">
-                        <a href="#"><img src="img/logotype.png" alt="logotype" class="logotype-box__logo"></a>
+                        <a href="#"><img src="../../img/logotype.png" alt="logotype" class="logotype-box__logo"></a>
                     </div>
                     <div class="authorization">
                         <a href="/guest/login" class="authorization__link">
@@ -291,7 +108,7 @@ AppAsset::register($this);
                     </div>
                     <div class="adaptive-menu">
                         <div class="adaptive-menu__button">
-                            <img src="img/icons/burger.png" alt="burger">
+                            <img src="../../img/icons/burger.png" alt="burger">
                         </div>
                         <nav class="adaptive-menu__navigation">
                             <ul class="adaptive-menu__list">
@@ -311,12 +128,12 @@ AppAsset::register($this);
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="#" class="adaptive-menu__link">
+                                    <a href="/guest/supplier" class="adaptive-menu__link">
                                         Become a supplier
                                     </a>
                                 </li>
                                 <li class="adaptive-menu__item">
-                                    <a href="find/crew/" class="adaptive-menu__link adaptive-menu__link--active">
+                                    <a href="/find/crew" class="adaptive-menu__link adaptive-menu__link--active">
                                         Crew
                                     </a>
                                 </li>
@@ -347,8 +164,7 @@ AppAsset::register($this);
             </div>
         </div>
     </div>
-
-    <div class="secondary-navbar margin-bottom-light">
+    <div class="secondary-navbar ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -360,7 +176,7 @@ AppAsset::register($this);
                                 </a>
                             </li>
                             <li class="secondary-navigation__item">
-                                <a href="#" class="secondary-navigation__link">
+                                <a href="/guest/supplier" class="secondary-navigation__link">
                                     Become a supplier
                                 </a>
                             </li>
@@ -396,129 +212,10 @@ AppAsset::register($this);
         </div>
     </div>
 </header>
-        <?= $content ?>
-    <footer class="footer">
-        <div class="container">
-            <div class="row margin-bottom-light">
-                <div class="col-lg-6">
-                    <div class="logotype-box">
-                        <img src="img/logotype-big.png" alt="logotype" class="logotype-box__footer">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="footer-nav-wrapper">
-                        <div class="footer-nav">
-                            <h4 class="footer-nav__title">
-                                For partners
-                            </h4>
-                            <ul class="footer-nav__list">
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Find a supplier
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Become a supplier
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Crew
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="/find/vessels" class="footer-nav__link">
-                                        Vessels sell/chartering
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Chartering market
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-nav">
-                            <h4 class="footer-nav__title">
-                                Learn more
-                            </h4>
-                            <ul class="footer-nav__list">
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Contacts
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Faq
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Terms and Conditions
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Sign In
-                                    </a>
-                                </li>
-                                <li class="footer-nav__item">
-                                    <a href="#" class="footer-nav__link">
-                                        Sign Up
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row margin-bottom-light">
-                <div class="col-lg-12">
-                    <div class="social-networks">
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-mail.png" alt="mail">
-                        </a>
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-mobile.png" alt="mobile">
-                        </a>
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-skype.png" alt="skype">
-                        </a>
-                        <a href="#" class="social-networks__link">
-                            <img src="img/icons/soc-mobile-2.png" alt="mobile">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 horizontal-between">
-                    <div class="copyright">
-                        <p class="copyright__content">
-                            © MarineNotes, 2018
-                        </p>
-                    </div>
-                    <div class="copyright">
-                        <p class="copyright__design-by">
-                            Design by HoteyCompany
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-<!--    </div>-->
-<!--</div>-->
-<!---->
-<!--<footer class="footer">-->
-<!--    <div class="container">-->
-<!--        <p class="pull-left">&copy; My Company --><?//= date('Y') ?><!--</p>-->
-<!---->
-<!--        <p class="pull-right">--><?//= Yii::powered() ?><!--</p>-->
-<!--    </div>-->
-<!--</footer>-->
 <?php } ?>
+<main>
+    <?= $content ?>
+</main>
 
 <?php $this->endBody() ?>
 </body>

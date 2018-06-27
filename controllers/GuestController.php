@@ -96,4 +96,9 @@ class GuestController extends Controller
         return $this->render('signup',['model'=>$model]);
     }
 
+    public function actionSupplier()
+    {
+        return $this->render('supplier');
+    }
+
 }
