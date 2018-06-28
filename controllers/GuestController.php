@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\components\AccessRule;
+use app\models\Login;
 use app\models\User;
 use app\models\Signup;
 use Yii;
@@ -52,19 +53,18 @@ class GuestController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
+        if (!Yii::$app->user->isGuest){
             return $this->goHome();
         }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+        $model = new Login();
+        if (Yii::$app->request->post('Login')){
+            $model->attributes = Yii::$app->request->post('Login');
+            if ($model->validate()){
+                Yii::$app->user->login($model->getUser());
+                return $this->goHome();
+            }
         }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        return $this->render('login',['model'=>$model]);
     }
 
     /**

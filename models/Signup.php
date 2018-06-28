@@ -17,7 +17,7 @@ class Signup extends User
     public function rules()
     {
         return [
-            [['email','password','f_name','s_name'], 'required'],
+            [['email','password','f_name','s_name','city','phone'], 'required'],
             ['email','email'],
 //            //Проверка уникальности username
 //            ['username','unique','targetClass'=>'app\models\User'],
@@ -32,6 +32,8 @@ class Signup extends User
         $user->email = $this->email;
         $user->f_name = $this->f_name;
         $user->s_name = $this->s_name;
+        $user->city = $this->city;
+        $user->phone = $this->phone;
         $user->password = sha1($this->password);
         return $user->save();
     }

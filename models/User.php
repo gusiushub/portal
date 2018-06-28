@@ -124,4 +124,9 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->role == $role;
     }
 
+    public function validatePassword($password)
+    {
+        return $this->password === sha1($password);
+    }
+
 }
