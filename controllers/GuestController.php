@@ -3,16 +3,17 @@
 namespace app\controllers;
 
 use app\components\AccessRule;
+use app\models\BecomeSupplier;
 use app\models\Login;
 use app\models\User;
 use app\models\Signup;
 use Yii;
-use app\models\LoginForm;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 
 class GuestController extends Controller
 {
+
     /**
      * {@inheritdoc}
      */
@@ -36,15 +37,6 @@ class GuestController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
 
     /**
      * Login action.
@@ -96,9 +88,24 @@ class GuestController extends Controller
         return $this->render('signup',['model'=>$model]);
     }
 
+    /**
+     * @return string
+     */
     public function actionSupplier()
     {
-        return $this->render('supplier');
+        $model = new BecomeSupplier();
+
+        if(isset($_POST['supplier_button']))
+        {
+            $model->attributes = Yii::$app->request->post('BecomeSupplier');
+            if($model->validate() && $model->signup())
+            {
+                return $this->redirect('/guest/login');
+            }
+        }
+        return $this->render('supplier',['model'=>$model]);
     }
+
+
 
 }

@@ -3,12 +3,14 @@
 namespace app\models;
 
 
-class Signup extends User
+class BecomeSupplier extends User
 {
     public $email;
     public $password;
-    public $f_name;
-    public $s_name;
+    public $company;
+    public $country;
+    public $website;
+    public $option;
     public $city;
     public $phone;
 
@@ -18,10 +20,8 @@ class Signup extends User
     public function rules()
     {
         return [
-            [['email','password','f_name','s_name','city','phone'], 'required'],
+            [['email','password','website','option','city','phone','company','country'], 'required'],
             ['email','email'],
-//            //Проверка уникальности username
-//            ['username','unique','targetClass'=>'app\models\User'],
             //Проверка уникальности email
             ['email','unique','targetClass'=>'app\models\User'],
             ['password','string','min'=>2,'max'=>10]
@@ -35,8 +35,10 @@ class Signup extends User
     {
         $user = new User();
         $user->email = $this->email;
-        $user->f_name = $this->f_name;
-        $user->s_name = $this->s_name;
+        $user->website = $this->website;
+        $user->option = $this->option;
+        $user->company = $this->company;
+        $user->country = $this->country;
         $user->city = $this->city;
         $user->phone = $this->phone;
         $user->password = sha1($this->password);

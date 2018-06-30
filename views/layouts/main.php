@@ -28,7 +28,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php if($_SERVER['REDIRECT_URL']=='/guest' or $_SERVER['REDIRECT_URL']=='/guest/')  {?>
+<?php if($_SERVER['REDIRECT_URL']=='/' or $_SERVER['REDIRECT_URL']=='')  {?>
     <header class="header header--blue">
         <div class="container">
             <div class="top-navbar">

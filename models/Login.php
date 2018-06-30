@@ -8,6 +8,10 @@ class Login extends Model
 {
     public $email;
     public $password;
+
+    /**
+     * @return array
+     */
     public function rules()
     {
         return [
@@ -16,7 +20,12 @@ class Login extends Model
             ['password','validatePassword']//собственная функция для валидации пароля
         ];
     }
-    public function validatePassword($attribute,$params)
+
+    /**
+     * @param $attribute
+     * @param $params
+     */
+    public function validatePassword($attribute, $params)
     {
         //если нет ошибок в валидации
         if(!$this->hasErrors()){
@@ -30,6 +39,10 @@ class Login extends Model
             }
         }
     }
+
+    /**
+     * @return null|static
+     */
     public function getUser()
     {
         //пользователя мы получаем по ввведенному email

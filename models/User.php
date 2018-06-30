@@ -45,7 +45,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             [['f_name', 's_name', 'email', 'city', 'phone', 'country', 'website', 'company'], 'string', 'max' => 100],
-            [['username'], 'string', 'max' => 50],
+//            [['username'], 'string', 'max' => 50],
             [['password', 'option', 'photo'], 'string', 'max' => 255],
         ];
     }
@@ -124,6 +124,10 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->role == $role;
     }
 
+    /**
+     * @param $password
+     * @return bool
+     */
     public function validatePassword($password)
     {
         return $this->password === sha1($password);

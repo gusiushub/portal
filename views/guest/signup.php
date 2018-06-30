@@ -2,6 +2,7 @@
 
 use yii\bootstrap\Html;
 use \yii\widgets\ActiveForm;
+
 ?>
 <section class="sign-up-2">
     <div class="container">
