@@ -1,8 +1,18 @@
 .profile4 {
-	padding-bottom: 2rem;
+	padding-bottom: 6rem;
 }
 
 .contract-information {
+
+	&__tab-wrapper {
+		display: none;
+
+
+		&--active {
+			display: block !important;
+		}
+
+	}
 
 	&__column {
 		display: inline-block;
@@ -45,6 +55,10 @@
 		}
 	}
 
+	&__mobile .checkbox-style__text {
+		vertical-align: super;
+	}
+
 	&__desktop {
 
 		@media screen and (max-width: 1260px) {
@@ -58,3 +72,5 @@
 	box-shadow: @basicShadow;
 	
 }
+
+

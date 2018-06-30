@@ -28,16 +28,33 @@ $form = ActiveForm::begin([
 
         <div class="row margin-bottom-light">
             <div class="col-lg-6">
-<?= $form->field($model, 'email')->textInput(['class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-1']) ?>
-<?= $form->field($model, 'f_name')->textInput(['class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-2']) ?>
-<?= $form->field($model, 's_name')->textInput(['class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-3'])?>
+<?= $form->field($model, 'email')->textInput([
+        'class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-1',
+        'placeholder'=>'FIRST NAME'
+    ]) ?>
+<?= $form->field($model, 'f_name')->textInput([
+        'class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-2',
+    'placeholder'=>'SECOND NAME'
+    ]) ?>
+<?= $form->field($model, 's_name')->textInput([
+        'class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-3',
+        'placeholder'=>''
+    ])?>
             </div>
 
 
             <div class="col-lg-6">
-<?= $form->field($model, 'city')->textInput(['class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-4']) ?>
-<?= $form->field($model, 'phone')->textInput(['class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-5']) ?>
-<?= $form->field($model, 'password')->textInput(['class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-6'])?>
+<?= $form->field($model, 'city')->textInput([
+        'class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-4',
+    ]) ?>
+<?= $form->field($model, 'phone')->textInput([
+        'class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-5',
+        'placeholder'=>'PHONE NUMBER'
+    ]) ?>
+<?= $form->field($model, 'password')->textInput([
+        'class'=>'textinput-container__input textinput-container__input--sing textinput-container__input--sing-6',
+        'placeholder'=>'PASSWORD'
+])?>
         </div>
         </div>
         <div class="row horizontal-center margin-bottom-medium">

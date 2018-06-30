@@ -61,6 +61,7 @@
 	.settings {
 		display: flex;
 		align-items: center;
+		position: relative;
 
 		@media screen and (max-width: 1200px) {
 			display: none;
@@ -70,6 +71,15 @@
 			font-size: 1.125rem;
 			text-decoration: none;
 			color: @activeColor;
+
+			&--head {
+				display: none;
+				text-align: center;
+
+				@media screen and (max-width: 900px) {
+					display: block;
+				}
+			}
 		}
 
 		&__icon {
@@ -95,6 +105,39 @@
 				background: url(../img/icons/gear.png);
 				background-position: center;
 				background-repeat: no-repeat;
+			}
+		}
+
+		&__hidden-menu {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			transform: translateY(112%);
+			z-index: 999;
+			display: none;
+		}
+
+		&__list {
+			background-color: @whiteColor;
+			list-style: none;
+		}
+
+		&__list-item {
+			width: 5.625rem;
+		}
+
+		&__link {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			line-height: 3.125rem;
+			font-size: 1.125rem;
+			color: @activeColor;
+			text-decoration: none;
+			transition: .3s;
+
+			&:hover {
+				background-color: @navActiveColor;
 			}
 		}
 	}

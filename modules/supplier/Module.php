@@ -12,7 +12,7 @@ class Module extends \yii\base\Module
      */
     public $controllerNamespace = 'app\modules\supplier\controllers';
 
-    public $layout = '/supplier';
+    //public $layout = '/supplier';
 
     /**
      * {@inheritdoc}

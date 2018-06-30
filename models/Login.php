@@ -46,6 +46,6 @@ class Login extends Model
     public function getUser()
     {
         //пользователя мы получаем по ввведенному email
-        return User::findOne(['email'=>$this->email]);
+        return User::findOne([$this->email]);
     }
 }

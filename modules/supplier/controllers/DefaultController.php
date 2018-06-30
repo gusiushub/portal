@@ -2,6 +2,7 @@
 
 namespace app\modules\supplier\controllers;
 
+use app\models\User;
 use yii\web\Controller;
 
 /**
@@ -15,7 +16,10 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        if ($_SESSION['__id']!=null) {
+            $user = new User();
+            return $this->render('index');
+        }
     }
 
     public function actionHype()
