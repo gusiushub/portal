@@ -1,0 +1,60 @@
+.profile4 {
+	padding-bottom: 2rem;
+}
+
+.contract-information {
+
+	&__column {
+		display: inline-block;
+		vertical-align: top;
+		&:not(:last-child) {
+			padding-right: 2.75rem;
+			background: url(../img/icons/blue-arrow.png);
+			background-repeat: no-repeat;
+			background-position: top right;
+			margin-right: 1.875rem;
+		}
+
+	}
+
+	&__list {
+
+		&--level-2 {
+			margin-left: 1.375rem;
+		}
+
+		&--level-3 {
+			margin-left: 2.75rem;
+		}
+
+		&--level-4 {
+			margin-left: 4.125rem;
+		}
+	}
+
+	&__line {
+		margin-bottom: 0.8rem;
+		
+	}
+
+	&__mobile {
+		display: none;
+
+		@media screen and (max-width: 1260px) {
+			display: block;
+		}
+	}
+
+	&__desktop {
+
+		@media screen and (max-width: 1260px) {
+			display: none;
+		}
+	}
+}
+
+.pay-now {
+	padding: 1.25rem;
+	box-shadow: @basicShadow;
+	
+}
