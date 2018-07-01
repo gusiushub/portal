@@ -47,6 +47,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['f_name', 's_name', 'email', 'city', 'phone', 'country', 'website', 'company'], 'string', 'max' => 100],
 //            [['username'], 'string', 'max' => 50],
             [['password', 'option', 'photo'], 'string', 'max' => 255],
+
         ];
     }
 
@@ -68,7 +69,7 @@ class User extends ActiveRecord implements IdentityInterface
             'username' => 'Username',
             'password' => 'Password',
             'option' => 'Option',
-            'photo' => 'Photo',
+            'photo' => 'select file',
         ];
     }
 

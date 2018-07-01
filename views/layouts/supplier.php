@@ -3,14 +3,13 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
+
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
+
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -40,7 +39,7 @@ AppAsset::register($this);
                     <div class="settings">
                         <div class="settings__item">
                             <a href="#" class="settings__email">
-                                wilkinson@gmail.com
+                                <?= Yii::$app->user->identity->email ?>
                             </a>
                         </div>
                         <div class="settings__item">
@@ -61,7 +60,7 @@ AppAsset::register($this);
                                         </a>
                                     </li>
                                     <li class="settings__list-item">
-                                        <a href="#" class="settings__link">
+                                        <a href="/guest/logout" class="settings__link">
                                             Sign Out
                                         </a>
                                     </li>
@@ -220,13 +219,13 @@ AppAsset::register($this);
                             Place an adverticement
                         </h3>
                     </a>
-                    <a href='#' class="primary-menu__item">
+                    <a href='/supplier/request' class="primary-menu__item">
                         <i class="icon-message primary-menu__icon"></i>
                         <h3 class="primary-menu__title">
                             incoming requests
                         </h3>
                     </a>
-                    <a href='#' class="primary-menu__item">
+                    <a href='/supplier/term' class="primary-menu__item">
                         <i class="icon-list3 primary-menu__icon"></i>
                         <h3 class="primary-menu__title">
                             term and conditions

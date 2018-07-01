@@ -18,20 +18,24 @@ class AppAsset extends AssetBundle
         'css/normalize.css',
         'css/bootstrap-grid.min.css',
         'css/styles.css',
+        //'css/slider.css',
     ];
 
     public $cssOptions = [
         'type' => 'text/css',
     ];
     public $js = [
+   //     'libs/jQuery/jquery-3.3.1.min.js',
         'js/common.js',
-        'libs/jQuery/jquery-3.3.1.min.js',
-        'libs/slick/slick.js',
-        'libs/Chart.min.js',
+
+
+//        'libs/slick/slick.min.js',
+//        'js/slider.js',
+//        'libs/Chart.min.js',
     ];
-    public $depends = [
-        'yii\web\YiiAsset',
-        //'yii\bootstrap\BootstrapAsset',
-    ];
+//    public $depends = [
+//        //'yii\web\YiiAsset',
+//        //'yii\bootstrap\BootstrapAsset',
+//    ];
 
 }

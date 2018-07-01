@@ -2010,3 +2010,30 @@ html {
     display: flex !important;
   }
 }
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 100px;
+  z-index:5;
+}
+
+.slick-prev,.slick-prev:hover,.slick-prev:focus {
+  left: 24px;
+  background: url(../img/icons/arrow-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-60%,-50%);
+}
+
+.slick-next,.slick-next:hover,.slick-next:focus {
+  right: 24px;
+  background: url(../img/icons/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(60%,-50%);
+}
