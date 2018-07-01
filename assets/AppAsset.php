@@ -1,9 +1,4 @@
 <?php
-/**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
- */
 
 namespace app\assets;
 
@@ -23,13 +18,24 @@ class AppAsset extends AssetBundle
         'css/normalize.css',
         'css/bootstrap-grid.min.css',
         'css/styles.css',
+        //'css/slider.css',
     ];
 
     public $cssOptions = [
         'type' => 'text/css',
     ];
     public $js = [
+   //     'libs/jQuery/jquery-3.3.1.min.js',
         'js/common.js',
+
+
+//        'libs/slick/slick.min.js',
+//        'js/slider.js',
+//        'libs/Chart.min.js',
     ];
+//    public $depends = [
+//        //'yii\web\YiiAsset',
+//        //'yii\bootstrap\BootstrapAsset',
+//    ];
 
 }

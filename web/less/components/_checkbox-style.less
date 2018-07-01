@@ -2,6 +2,22 @@
 	display: flex;
 	align-items: flex-start;
 
+	&--crew {
+		width: 48%;
+
+		@media screen and (max-width: 1210px) {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 990px) {
+			width: 48%;
+		}
+	}
+
+	&--unactive .checkbox-style__text {
+		color: lighten(@grayTextColor, 20%);
+	}
+
 	&__check {
 		position: relative;
 		display: inline-block;
@@ -20,9 +36,17 @@
 			transform: translate(-50%, -50%);
 		}
 
+
+
 		&--accepting {
 			margin-right: 1rem;
 			margin-top: 2px;
+		}
+
+		&--crew {
+			background-color: white;
+			margin-top: 0;
+			margin-left: 4px;
 		}
 
 		&--profile {
@@ -53,6 +77,18 @@
 
 		&--profile {
 			display: block;
+		}
+
+		&--crew {
+			width: 100%;
+			background-color: @navActiveColor;
+			color: @whiteColor;
+			font-size: 1.5rem;
+			min-height: 2.375rem;
+			border: none;
+			text-transform: uppercase;
+			outline: none;
+			padding: 0 4px;
 		}
 	}
 

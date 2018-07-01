@@ -53,7 +53,7 @@ class GuestController extends Controller
             $model->attributes = Yii::$app->request->post('Login');
             if ($model->validate()){
                 Yii::$app->user->login($model->getUser());
-                return $this->goHome();
+                return $this->redirect(Yii::$app->urlManager->createUrl(['supplier/', 'id' => $_SESSION['__id']]));
             }
         }
         return $this->render('login',['model'=>$model]);

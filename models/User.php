@@ -47,6 +47,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['f_name', 's_name', 'email', 'city', 'phone', 'country', 'website', 'company'], 'string', 'max' => 100],
 //            [['username'], 'string', 'max' => 50],
             [['password', 'option', 'photo'], 'string', 'max' => 255],
+
         ];
     }
 
@@ -68,7 +69,7 @@ class User extends ActiveRecord implements IdentityInterface
             'username' => 'Username',
             'password' => 'Password',
             'option' => 'Option',
-            'photo' => 'Photo',
+            'photo' => 'select file',
         ];
     }
 
@@ -131,6 +132,18 @@ class User extends ActiveRecord implements IdentityInterface
     public function validatePassword($password)
     {
         return $this->password === sha1($password);
+    }
+
+    public static function findUserByEmail($email)
+    {
+        return User::find()->where(['email'=>$email])->one();
+    }
+
+    public function getUser()
+    {
+        if ($this->user===false){
+
+        }
     }
 
 }
