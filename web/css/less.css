@@ -1,0 +1,60 @@
+//Connect other less files
+
+
+//abstracts
+@import url(../less/abstracts/_variables.less);
+@import url(../less/abstracts/_mixins.less);
+
+//base
+@import url(../less/base/_animation.less);
+@import url(../less/base/_basic.less);
+@import url(../less/base/_typography.less);
+@import url(../less/base/_fonts.less);
+@import url(../less/base/_utilites.less);
+
+//components
+@import url(../less/components/_main-headline.less);
+@import url(../less/components/_primary-menu.less);
+@import url(../less/components/_secondary-headline.less);
+@import url(../less/components/_select-style.less);
+@import url(../less/components/_button.less);
+@import url(../less/components/_advertising.less);
+@import url(../less/components/_company-box.less);
+@import url(../less/components/_add-plus.less);
+@import url(../less/components/_show-all.less);
+@import url(../less/components/_text-input.less);
+@import url(../less/components/_checkbox-style.less);
+@import url(../less/components/_send-form.less);
+@import url(../less/components/_result-box.less);
+@import url(../less/components/_sub-title.less);
+@import url(../less/components/_sell-card.less);
+@import url(../less/components/_contract-line.less);
+
+//loyout
+@import url(../less/loyout/_header.less);
+@import url(../less/loyout/_footer.less);
+@import url(../less/loyout/_clonestyles.less);
+
+//pages
+@import url(../less/pages/_find-a-supplier-1.less);
+@import url(../less/pages/_find-a-supplier-results.less);
+@import url(../less/pages/_find-a-crew-1.less);
+@import url(../less/pages/_find-a-student-1.less);
+@import url(../less/pages/_find-a-chartering-1.less);
+@import url(../less/pages/_find-a-chartering-result.less);
+@import url(../less/pages/_info-about-ship.less);
+@import url(../less/pages/_page-singIn.less);
+@import url(../less/pages/_find-a-vessels-results.less);
+@import url(../less/pages/_fina-a-vessels-1.less);
+@import url(../less/pages/_page-signUp.less);
+@import url(../less/pages/_page-start-5-button.less);
+@import url(../less/pages/_page-start-5-button.less);
+@import url(../less/pages/_pay.less);
+@import url(../less/pages/_profile1.less);
+@import url(../less/pages/_profile2.less);
+@import url(../less/pages/_profile3.less);
+@import url(../less/pages/_profile4.less);
+@import url(../less/pages/_profile5.less);
+@import url(../less/pages/_profile6.less);
+@import url(../less/pages/_terms-conditions.less);
+@import url(../less/pages/_find-a-crew-result.less);

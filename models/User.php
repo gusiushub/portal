@@ -133,16 +133,16 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->password === sha1($password);
     }
 
-    public static function findUserById($id)
+    public static function findUserByEmail($email)
     {
-        return User::find()->where(['id'=>$id])->one();
+        return User::find()->where(['email'=>$email])->one();
     }
 
-//    public function getUser()
-//    {
-//        if ($this->user===false){
-//
-//        }
-//    }
+    public function getUser()
+    {
+        if ($this->user===false){
+
+        }
+    }
 
 }

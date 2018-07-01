@@ -288,6 +288,7 @@ html {
   border-top: none;
   text-decoration: none;
   min-width: 8rem;
+  padding-bottom: 10px;
 }
 @media screen and (max-width: 990px) {
   .primary-menu__item {
@@ -302,6 +303,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-bottom: 0;
   }
 }
 .primary-menu__item:hover {
