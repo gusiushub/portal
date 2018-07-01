@@ -214,7 +214,7 @@ AppAsset::register($this);
                             contracts
                         </h3>
                     </a>
-                    <a href='#' class="primary-menu__item">
+                    <a href='/supplier/advertising' class="primary-menu__item">
                         <i class="icon-window primary-menu__icon"></i>
                         <h3 class="primary-menu__title">
                             Place an adverticement

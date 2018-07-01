@@ -1,9 +1,4 @@
 <?php
-/**
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
- */
 
 namespace app\assets;
 
@@ -23,7 +18,6 @@ class AppAsset extends AssetBundle
         'css/normalize.css',
         'css/bootstrap-grid.min.css',
         'css/styles.css',
-        //'css/less.css',
     ];
 
     public $cssOptions = [
